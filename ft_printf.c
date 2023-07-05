@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:20:47 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 17:13:32 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/05 17:22:08 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	ft_printf(char const *polla, ...)
 			format_count = ft_types(*(++polla), ano, &counter);
 			if (format_count == -1)
 				return (counter);
+			polla++;
 		}
 	}
 	return (counter);
@@ -62,5 +63,5 @@ int	ft_types(char c, va_list ano, int *count)
 
 /*int main()
 {
-	ft_printf("hola");
+	ft_printf("hola%d\n", 8);
 }*/
