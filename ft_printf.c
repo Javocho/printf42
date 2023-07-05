@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:20:47 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 18:08:13 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/06 01:41:26 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,10 @@ int	ft_types(char c, va_list ano, int *count)
 	}
 	else if (c == 's')
 		return (ft_putstr(va_arg(ano, char *), count));
-	else if (c == 'd' || c == 'i' || c == 'u')
+	else if (c == 'd' || c == 'i')
 		return (ft_putnbr(va_arg(ano, int), count));
+	else if (c == 'u')
+		return (ft_putnbr_unsigned(va_arg(ano, unsigned int), count));
 	else if (c == 'p')
 		return (ft_print_pointer(va_arg(ano, int), count));
 	else if (c == 'X')
@@ -64,16 +66,12 @@ int	ft_types(char c, va_list ano, int *count)
 		return (ft_putchar('%'));
 	return (-1);
 }
-/*int main()
+/*
+int main()
 {
-	int a = 0;
-	int b = 0;
 
-	a = ft_printf("%c",'c');
-	printf("\n");
-	b = printf("%c", 'c');
-
-	printf("\nmi printf %d",a);
-	printf("\nsu printf %d",b);
+	int c = ft_printf("\nmi printf %p", &LONG_MIN);
+	int d = printf("\nsu printf %p", &LONG_MAX);
+	printf("mi printf %d su printf %d", c, d);	
 }
 */

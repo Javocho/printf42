@@ -3,14 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fcosta-f <fcosta-f@student.42barcelona.    +#+  +:+       +#+         #
+#    By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 11:10:16 by fcosta-f          #+#    #+#              #
-#    Updated: 2023/07/05 17:17:04 by fcosta-f         ###   ########.fr        #
+#    Updated: 2023/07/05 19:40:24 by fcosta-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS    = ft_printf.c ft_hexa_lower.c ft_hexa_upper.c ft_print_pointer.c ft_putchar.c ft_putnbr.c ft_putstr.c
+SRCS    = ft_printf.c ft_hexa_lower.c ft_hexa_upper.c ft_print_pointer.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_putnbr_unsigned.c
+
 OBJS    = $(SRCS:.c=.o)
 
 CC      = gcc
