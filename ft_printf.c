@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fcosta-f <fcosta-f@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:20:47 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 16:57:35 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/05 17:13:32 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printf(char const *polla, ...)
 	va_start(ano, polla);
 	if (!polla)
 		return (0);
-	while (polla)
+	while (*polla != '\0')
 	{
 		if (*polla != '%')
 		{
@@ -60,10 +60,7 @@ int	ft_types(char c, va_list ano, int *count)
 	return (-1);
 }
 
-int main(int argc, char **argv)
+/*int main()
 {
-	if (argc > 1)
-	{
-		ft_printf(argv[1], argv[2][0]);
-	}
-}
+	ft_printf("hola");
+}*/
