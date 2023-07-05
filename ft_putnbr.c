@@ -3,37 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcosta-f <fcosta-f@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 23:34:36 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/03 23:53:18 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/05 15:45:47 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putnbr(int nb)
+int	ft_putnbr(int nb, int *count)
 {
-	int	count;
-
-	count = 0;
 	if (nb < 0)
 	{
-		ft_putchar('-');
+		if (ft_putchar('-') == -1)
+			return (-1);
 		nb = -nb;
-		++count;
+		++(*count);
 	}
 	if (nb >= 10)
 	{
-		count += ft_putnbr(nb / 10);
+		if (ft_putnbr(nb / 10, count) == -1)
+			return (-1);
 		nb = nb % 10;
 	}
 	if (nb < 10)
 	{
-		ft_putchar(nb + 48);
-		return (count + 1);
+		if (ft_putchar(nb + 48) == -1)
+			return (-1);
+		++(*count);
 	}
-	return (count);
+	return (*count);
 }
 
 /*
