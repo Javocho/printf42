@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcosta-f <fcosta-f@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:20:43 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 12:35:32 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:10:04 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 
 int	ft_printf(char const *polla, ...);
 int	ft_putchar(char c);
-int	ft_types(char c, va_list ano);
-int	putstr(char *s);
-int	ft_putnbr(int nb);
-int	ft_hexa_upper(int n);
+int	ft_types(char c, va_list ano, int *counter);
+int	putstr(char *s, int *counter);
+int	ft_putnbr(int nb, int *counter);
+int	ft_hexa_upper(int n, int *counter);
 int	ft_hexa_lower(int n, int *counter);
 
 

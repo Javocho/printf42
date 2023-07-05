@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 19:59:46 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 12:46:52 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:17:55 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	ft_str(char *s, int *counter)
 {
-	*counter = 0;
 	while (s)
 	{
 		if (write(1, s, 1) == -1)
