@@ -6,11 +6,11 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 20:46:57 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 12:43:46 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:47:53 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_i_hexa_upper(int n, int *counter)
 {

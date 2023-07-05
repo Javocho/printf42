@@ -6,13 +6,13 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 19:59:46 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 16:17:55 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:47:10 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_str(char *s, int *counter)
+int	ft_putstr(char *s, int *counter)
 {
 	while (s)
 	{

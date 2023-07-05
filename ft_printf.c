@@ -6,11 +6,11 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:20:47 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 16:19:52 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:57:35 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(char const *polla, ...)
 {
@@ -20,7 +20,7 @@ int	ft_printf(char const *polla, ...)
 
 	va_start(ano, polla);
 	if (!polla)
-		return (NULL);
+		return (0);
 	while (polla)
 	{
 		if (*polla != '%')
@@ -32,7 +32,7 @@ int	ft_printf(char const *polla, ...)
 		}
 		else
 		{
-			format_count = ft_types(++polla, ano, &counter);
+			format_count = ft_types(*(++polla), ano, &counter);
 			if (format_count == -1)
 				return (counter);
 		}
@@ -44,7 +44,7 @@ int	ft_printf(char const *polla, ...)
 int	ft_types(char c, va_list ano, int *count)
 {
 	if (c == 'c')
-		return (ft_putchar(va_arg(ano, char)));
+		return (ft_putchar(va_arg(ano, int)));
 	else if (c == 's')
 		return (ft_putstr(va_arg(ano, char *), count));
 	else if (c == 'd' || c == 'i' || c == 'u')
@@ -57,4 +57,13 @@ int	ft_types(char c, va_list ano, int *count)
 		return (ft_hexa_lower(va_arg(ano, int), count));
 	else if (c == '%')
 		return (ft_putchar('%'));
+	return (-1);
+}
+
+int main(int argc, char **argv)
+{
+	if (argc > 1)
+	{
+		ft_printf(argv[1], argv[2][0]);
+	}
 }
