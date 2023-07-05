@@ -6,14 +6,17 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 20:46:57 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 16:47:53 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/05 20:32:08 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_i_hexa_upper(int n, int *counter)
+int	ft_i_hexa_upper(int nb, int *counter)
 {
+	unsigned int	n;
+
+	n = nb;
 	if (n > 15)
 	{
 		if (ft_i_hexa_upper(n / 16, counter) == -1)
