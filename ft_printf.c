@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:20:47 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/06 01:41:26 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/06 14:36:31 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,8 @@ int	ft_printf(char const *polla, ...)
 	{
 		if (*polla != '%')
 		{
-			if (ft_putchar(*polla) == -1)
+			if (ft_putchar(*polla, &counter) == -1)
 				return (-1);
-			++counter;
 			++polla;
 		}
 		else
@@ -47,8 +46,7 @@ int	ft_types(char c, va_list ano, int *count)
 {
 	if (c == 'c')
 	{
-		(*count)++;
-		return (ft_putchar(va_arg(ano, int)));
+		return (ft_putchar(va_arg(ano, int), count));
 	}
 	else if (c == 's')
 		return (ft_putstr(va_arg(ano, char *), count));
@@ -63,15 +61,14 @@ int	ft_types(char c, va_list ano, int *count)
 	else if (c == 'x')
 		return (ft_hexa_lower(va_arg(ano, int), count));
 	else if (c == '%')
-		return (ft_putchar('%'));
+		return (ft_putchar('%', count));
 	return (-1);
 }
-/*
-int main()
-{
 
-	int c = ft_printf("\nmi printf %p", &LONG_MIN);
-	int d = printf("\nsu printf %p", &LONG_MAX);
-	printf("mi printf %d su printf %d", c, d);	
-}
-*/
+// int main()
+// {
+
+// 	int c = ft_printf("\nmi printf %c", '0');
+// 	int d = printf("\nsu printf %c", '0');
+// 	printf("mi printf %d su printf %d", c, d);	
+// }

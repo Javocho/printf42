@@ -6,14 +6,16 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 21:23:27 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/06 01:16:46 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/06 14:41:47 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_pointer(int n, int *count)
+int	ft_print_pointer(unsigned long long n, int *count)
 {
+	if (!n)
+		return (0);
 	if (write(1, "0x", 2) == -1)
 	{
 		return (-1);

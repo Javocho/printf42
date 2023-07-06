@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 21:19:39 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/06 01:52:01 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/06 12:56:20 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_i_hexa_lower(int nb, int *counter)
 {
-	unsigned int	n;
+	unsigned long long	n;
 
-	n = (unsigned int)nb;
+	n = (unsigned long long)nb;
 	if (n > 15)
 	{
 		if (ft_i_hexa_lower(n / 16, counter) == -1)
@@ -24,15 +24,13 @@ int	ft_i_hexa_lower(int nb, int *counter)
 	}
 	if ((n % 16) < 10)
 	{
-		if (ft_putchar((n % 16) + '0') == -1)
+		if (ft_putchar((n % 16) + '0', counter) == -1)
 			return (-1);
-		*counter = *counter + 1;
 	}
 	else
 	{
-		if (ft_putchar((n % 16) - 10 + 'a') == -1)
+		if (ft_putchar((n % 16) - 10 + 'a', counter) == -1)
 			return (-1);
-		*counter = *counter + 1;
 	}
 	return (*counter);
 }

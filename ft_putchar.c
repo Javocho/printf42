@@ -3,16 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fcosta-f <fcosta-f@student.42barcelona.    +#+  +:+       +#+        */
+/*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:46:53 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 17:19:20 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/06 12:59:48 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int	ft_putchar(char c, int *counter)
 {
-	return (write(1, &c, 1));
+	int	n;
+
+	n = write(1, &c, 1);
+	if (n == -1)
+		return (-1);
+	(*counter)++;
+	return (*counter);
 }

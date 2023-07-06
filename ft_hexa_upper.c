@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 20:46:57 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 20:32:08 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/06 12:56:44 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,13 @@ int	ft_i_hexa_upper(int nb, int *counter)
 	}
 	if ((n % 16) < 10)
 	{
-		if (ft_putchar((n % 16) + '0') == -1)
+		if (ft_putchar((n % 16) + '0', counter) == -1)
 			return (-1);
-		*counter = *counter + 1;
 	}
 	else
 	{
-		if (ft_putchar((n % 16) - 10 + 'A') == -1)
+		if (ft_putchar((n % 16) - 10 + 'A', counter) == -1)
 			return (-1);
-		*counter = *counter + 1;
 	}
 	return (*counter);
 }

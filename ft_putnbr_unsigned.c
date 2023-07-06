@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 19:39:16 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/05 20:22:56 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/06 12:58:06 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@ int	ft_putnbr_unsigned(unsigned int n, int *count)
 	}
 	if (nb < 10)
 	{
-		if (ft_putchar(nb + 48) == -1)
+		if (ft_putchar(nb + 48, count) == -1)
 			return (-1);
-		++(*count);
 	}
 	return (*count);
 }
