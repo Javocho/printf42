@@ -6,20 +6,20 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 21:19:39 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/06 12:56:20 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/11 21:14:04 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_i_hexa_lower(int nb, int *counter)
+int	ft_hexa_lower(int nb, int *counter)
 {
 	unsigned long long	n;
 
 	n = (unsigned long long)nb;
 	if (n > 15)
 	{
-		if (ft_i_hexa_lower(n / 16, counter) == -1)
+		if (ft_hexa_lower(n / 16, counter) == -1)
 			return (-1);
 	}
 	if ((n % 16) < 10)
@@ -35,10 +35,21 @@ int	ft_i_hexa_lower(int nb, int *counter)
 	return (*counter);
 }
 
-int	ft_hexa_lower(int n, int *counter)
-{
-	return (ft_i_hexa_lower(n, counter));
-}
+// int	ft_hexa_lower(int nb, int *counter)
+// {
+// 	unsigned long long	n;
+
+// 	n = (unsigned long long)nb;
+// 	if (n > 15)
+// 	{
+// 		if (ft_hexa_lower(n / 16, counter) == -1)
+// 			return (-1);
+// 	}
+// 	if (write(1, (&"0123456789abcdef")[n % 16], 1) == -1)
+// 		return (-1);
+// 	*counter = *counter + 1;
+// 	return (*counter);
+// }
 
 /*int main()
 {

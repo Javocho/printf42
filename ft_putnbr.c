@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 23:34:36 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/06 12:57:57 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/11 18:09:02 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	ft_putnbr(int n, int *count)
 	}
 	return (*count);
 }
-
 /*
 #include <stdio.h>
 #include <unistd.h>
@@ -70,8 +69,7 @@ int	ft_putnbr(int nb)
 	}
 	return (count);
 }
-
-int main() {
-    printf("%d", ft_putnbr(-12));
-}
 */
+// int main() {
+//     printf("%d", ft_putnbr(-12));
+// }
