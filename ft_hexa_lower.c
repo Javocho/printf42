@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 21:19:39 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/12 12:13:15 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/12 12:29:16 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_hexa_lower_p(unsigned long long n, int *counter)
 {
 	if (n > 15)
 	{
-		if (ft_hexa_lower(n / 16, counter) == -1)
+		if (ft_hexa_lower_p(n / 16, counter) == -1)
 			return (-1);
 	}
 	if ((n % 16) < 10)

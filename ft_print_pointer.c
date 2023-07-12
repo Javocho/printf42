@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 21:23:27 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/12 12:11:41 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/12 12:33:45 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_print_pointer(unsigned long long n, int *count)
 {
 	if (!n)
 	{
-		if (!write(1, "0x0", 3))
+		if (write(1, "0x0", 3) == -1)
 			return (-1);
 		*count += 3;
 		return (*count);
