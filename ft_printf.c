@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:20:47 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/11 21:12:03 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/12 12:20:27 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,22 +70,3 @@ int	ft_types(char c, va_list ano, int *count)
 		return (ft_putchar('%', count));
 	return (-1);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	int b;
-// 	b = printf("jaja culo %p\n", "");
-// 	printf("%d\n", b);
-// 	b = ft_printf("jaja culo %p\n", "");
-// 	printf("%d", b);
-//}
-
-/*
-		test_printf("%p", "");
-		test_printf("%p", NULL);
-		test_printf("%p", (void *)-14523);
-		test_printf("0x%p-", (void *)ULONG_MAX);
-		test_printf("%pp%p%p", (void *)LONG_MAX + 423856, (void *)0, (void *)INT_MAX);
-*/

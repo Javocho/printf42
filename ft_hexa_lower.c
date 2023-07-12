@@ -6,11 +6,31 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 21:19:39 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/11 21:14:04 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/12 12:13:15 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_hexa_lower_p(unsigned long long n, int *counter)
+{
+	if (n > 15)
+	{
+		if (ft_hexa_lower(n / 16, counter) == -1)
+			return (-1);
+	}
+	if ((n % 16) < 10)
+	{
+		if (ft_putchar((n % 16) + '0', counter) == -1)
+			return (-1);
+	}
+	else
+	{
+		if (ft_putchar((n % 16) - 10 + 'a', counter) == -1)
+			return (-1);
+	}
+	return (*counter);
+}
 
 int	ft_hexa_lower(int nb, int *counter)
 {

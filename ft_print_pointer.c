@@ -6,7 +6,7 @@
 /*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 21:23:27 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/11 18:24:50 by fcosta-f         ###   ########.fr       */
+/*   Updated: 2023/07/12 12:11:41 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_print_pointer(unsigned long long n, int *count)
 		return (-1);
 	}
 	*count += 2;
-	if (ft_hexa_lower(n, count) == -1)
+	if (ft_hexa_lower_p(n, count) == -1)
 		return (-1);
 	return (*count);
 }

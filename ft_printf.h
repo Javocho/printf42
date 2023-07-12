@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rpliego <rpliego@student.42barcelo>        +#+  +:+       +#+        */
+/*   By: fcosta-f <fcosta-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:20:43 by fcosta-f          #+#    #+#             */
-/*   Updated: 2023/07/10 22:53:37 by rpliego          ###   ########.fr       */
+/*   Updated: 2023/07/12 12:12:31 by fcosta-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ int	ft_putstr(char *s, int *counter);
 int	ft_putnbr(int nb, int *counter);
 int	ft_putnbr_unsigned(unsigned int n, int *count);
 int	ft_hexa_upper(int n, int *counter);
-int	ft_hexa_lower(int n, int *counter);
+int	ft_hexa_lower(int nb, int *counter);
 int	ft_print_pointer(unsigned long long n, int *count);
 int	ft_printf_process(char const *polla, va_list ano);
+int	ft_hexa_lower_p(unsigned long long n, int *counter);
 
 #endif
